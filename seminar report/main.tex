@@ -1,0 +1,49 @@
+% !TeX document-id = {a20f43b2-ab4e-4871-aad0-cb417dac4610}
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex main
+% 	 bibtex8 -W -c cp1256fa main
+%      xindy -L persian -C utf8 -M texindy main
+% 	 xelatex main
+% 	 xelatex main
+% End of Commands
+
+
+\documentclass[oneside,openany,msc]{IUST-Thesis}
+
+\input{commands}
+
+\begin{document}
+
+\pagenumbering{harfi}
+\input{faTitle}
+\tableofcontents
+
+%\newpage
+%\listoffigures \newpage
+%\listoftables  \newpage
+
+\pagestyle{fancy}
+
+\include{intro}
+
+% مراجع
+%\pagestyle{empty}
+%{
+%\onehalfspacing
+%\bibliographystyle{acm-fa}%{chicago-fa}%{plainnat-fa}%
+%\bibliography{MyReferences}
+%}
+
+\pagestyle{fancy}
+
+
+%\baselineskip=.75cm
+\onehalfspacing
+%\include{dicfa2en}
+%\include{dicen2fa}
+\printindex
+
+\label{LastPage}
+
+\end{document}
