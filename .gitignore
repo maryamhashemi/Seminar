@@ -1,5 +1,3 @@
-
-
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
