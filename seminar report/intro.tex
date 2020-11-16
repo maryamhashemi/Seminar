@@ -217,13 +217,140 @@
 
 
 \section{بررسی فازهای مختلف مسئله پرسش و پاسخ تصویری}
-باید تکمیل شود.
-\subsection{فاز 1 : استخراج ویژگی از تصویر و سوا ل}
-باید تکمیل شود.
+{
+بسیاری از محققان راه‌حل‌ها یا الگوریتم‌هایی را برای حل مسئله پرسش و پاسخ تصویری پیشنهاد‌کرده‌اند که به طور کلی می‌توان آن را به یک فرآیند سه فازی تقسیم‌بندی کرد. فاز اول این فرآیند استخراج ویژگی از تصویر و سوالات است که راه‌حل‌های موفق در این فاز ریشه در روزهای باشکوه یادگیری عمیق دارد زیرا بیشتر راه‌حل‌های موفق در این حوزه از مدل‌های یادگیری عمیق استفاده می‌کنند مانند 
+  \lr{CNN}
+ ها برای استخراج ویژگی از  تصویر و 
+  \lr{RNN}
+  ها و انواع آن(
+  \lr{LSTM}
+  و
+  \lr{GRU}
+  ) برای استخراج ویژگی از سوالات. در فاز دوم که مهم‌ترین و اصلی‌ترین فاز می‌باشد، ویژگی‌های استخراج شده از تصویر و سوال باهم ترکیب می‌شوند. سپس از ترکیب ویژگی‌ها برای تولید پاسخ نهایی در فاز سوم استفاده می‌شود.
+	\subsection{فاز 1 : استخراج ویژگی از تصویر و سوا ل}
+	{
+		استخراج ویژگی از تصویر و سوال مرحله‌ی مقدماتی در پرسش و پاسخ تصویری است. ویژگی تصویر، تصویر را به عنوان یک بردار عددی  توصیف می‌کند تا بتوان به راحتی عملیات‌های مختلف ریاضی را بر روی آن اعمال کرد. روش‌های زیادی وجود دارد که به صورت مستقیم از تصویر ویژگی استخراج می‌کنند مانند بردار ساده 
+		\lr{RGB}
+		،
+		\lr{SIFT}
+		، تبدیل
+		\lr{HAAR}
+		و 
+		\lr{HOG}.
+		اما با ظهور شبکه‌های یادگیری عمیق، نیاز به استخراج ویژگی به صورت مستقیم از بین رفت زیرا این شبکه‌ها قادر به یادگیری ویژگی هستند. آموزش مدل‌های یادگیری عمیق به منابع محاسباتی گران قمیت و مجموعه‌داده‌های بزرگ نیاز دارد. از این رو، استفاده از مدل‌های شبکه عصبی عمیق از قبل آموزش دیده، استخراج ویژگی‌ از تصاویر را به راحتی امکان‌پذیر می‌کنند. 
+		
+		یکی از بهترین شبکه‌های عصبی برای استخراج ویژگی از تصویر، شبکه‌های عصبی کانولوشنی هستند. 
+		\begin{table}
+			\begin{center}
+				\begin{tabular}{ |c|c|c|c|c| } 
+					\hline
+					\textbf{مدل \lr{CNN}} & \textbf{سال} & \textbf{تعداد لایه‌‌ها} & \textbf{ابعاد ورودی}  & \textbf{ابعاد خروجی(تعداد ویژگی‌ها)} \\
+					\hline \hline
+					\textbf{\lr{AlexNet}} & 2012 & 8 & 227×227 & 4096 \\
+					\hline
+					\textbf{\lr{VGGNet}} & 2014 & 19 & 224×224 & 4096 \\
+					\hline
+					\textbf{\lr{GoogleNet}} & 2014 & 22 & 229×229 & 1024 \\
+					\hline
+					\textbf{\lr{ResNet}} & 2015 & 152 & 224×224 & 20148\\
+					\hline
+				\end{tabular}
+			\end{center}
+			\caption{بررسی اجمالی مهم‌ترین شبکه‌های عصبی کانولوشنی که بر روی مجموعه‌داده
+				\lr{ImageNet}
+				آموزش ‌داده شده.}
+			\label{tabel:2}
+		\end{table}
+		 در جدول 
+		\ref{tabel:2}
+		چند نمونه از برجسته‌ترین شبکه‌های عصبی کانولوشنی که بر روی مجموعه‌داده
+		\lr{ImageNet}
+		آموزش ‌داده شده‌اند؛
+		آورده شده است. بیشتر مدل‌های ارائه شده در پرسش و پاسخ تصویری از این شبکه‌های عصبی کانولوشنی استفاده می‌کنند تا محتوای تصویری خود را به برداری‌هایی عددی تبدیل کنند.
+		\begin{table}
+			\begin{center}
+				\begin{tabular}{ |c|c|c|c|c| } 
+					\hline
+					\textbf{مدل پرسش و پاسخ تصویری} & \textbf{AlexNet} & \textbf{VGGNet} & \textbf{GoogleNet}  & \textbf{ResNet}\\
+					\hline \hline
+					\textbf{\lr{Image\_QA}} &  & \checkmark&  & \\
+					\hline
+					\textbf{\lr{Talk\_to\_Machine}} &  &  & \checkmark &  \\
+					\hline
+					\textbf{\lr{VQA}} &  & \checkmark &  &  \\
+					\hline
+					\textbf{\lr{Vis\_Madlibs}} & \checkmark &  &  & \\
+					\hline
+					\textbf{\lr{VIS + LSTM}} &  & \checkmark  &  & \\
+					\hline
+					\textbf{\lr{Ahab}} &  & \checkmark &  &  \\
+					\hline
+					\textbf{\lr{ABC\-CNN}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{Comp\_QA}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{DPPNet}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{Answer\_CNN}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{VQA\-Caption}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{Re\_Baseline}} &  &  &  & \checkmark\\
+					\hline
+					\textbf{\lr{MCB}} &  &  &  & \checkmark \\
+					\hline
+					\textbf{\lr{SMem-VQA}} &  &  & \checkmark & \\
+					\hline
+					\textbf{\lr{Region\_VQA}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{Vis7W}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{Ask\_Neuron}} & \checkmark & \checkmark & \checkmark & \checkmark \\
+					\hline
+					\textbf{\lr{SCMC}} &  &  &  & \checkmark \\
+					\hline
+					\textbf{\lr{HAN}} &  &  &  & \checkmark\\
+					\hline
+					\textbf{\lr{StrSem}} &  & \checkmark &  & \\
+					\hline
+					\textbf{\lr{AVQAN}} &  &  &  & \checkmark \\
+					\hline
+					\textbf{\lr{CMF}} &  &  &  & \checkmark\\
+					\hline
+					\textbf{\lr{EnsAtt}} &  &  &  & \checkmark \\
+					\hline
+					\textbf{\lr{MetaVQA}} &  &  &  & \checkmark\\
+					\hline
+					\textbf{\lr{DA-NTN}} &  &  &  & \checkmark \\
+					\hline
+					\textbf{\lr{QGHC}} &  &  &  & \checkmark\\
+					\hline
+					\textbf{\lr{QTA}} &  &  &  & \checkmark\\
+					\hline
+					\textbf{\lr{WRAN}} &  &  &  & \checkmark \\
+					\hline
+					\textbf{\lr{QAR}} &  &  &  & \checkmark \\
+					\hline
+				\end{tabular}
+			\end{center}
+			\caption{شبکه‌های عصبی کانولوشنی استفاده شده در مدل‌های پرسش و پاسخ تصویری.}
+			\label{tabel:3}
+		\end{table}
+		جدول 
+		\ref{tabel:3}
+		لیستی از مدل‌های استفاده شده برای حل مسئله پرسش و پاسخ تصویری را نشان می‌دهد و مشخص می‌کند که هر کدام از این مدل‌ها برای استخراج ویژگی از تصویر از کدام یک از شبکه‌های عصبی کانولوشنی موجود در جدول 
+		\ref{tabel:2}
+		بهره می‌برد. 
+		
+		
+	
+	}
 \subsection{فاز 2 : درک مشترک تصویر و سوا ل}
 باید تکمیل شود.
 \subsection{فاز 3 : تولید جواب}
 باید تکمیل شود.
+}
+
 \section{معیارهای ارزیابی مسئله پرسش و پاسخ تصویری}
 {
 در این بخش می‌خواهیم به طور مختصر معیارهای ارزیابی شناخته شده در مسئله پرسش و پاسخ تصویری را بررسی‌کنیم. همان‌طور که قبلا ذکر شد؛ معمولا دو نوع سوال در مجموعه‌داده‌های پرسش و پاسخ تصویری در نظر گرفته می‌شود: سوالات 
