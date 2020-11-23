@@ -6,7 +6,9 @@
 %\thispagestyle{empty}
 \section{شرح مسئله}
 {
-در سال‌های اخیر پیشرفت‌های زیادی در مسائل هوش مصنوعی و یادگیری عمیق که در تقاطع دو حوزه پردازش زبان طبیعی  و بینایی ماشین  قرار می‌گیرند؛ رخ داده است. یکی از مسائلی که اخیراً مورد توجه قرارگرفته است؛ پرسش و پاسخ تصویری  است. با توجه به یک تصویر و یک سؤال به زبان طبیعی، سیستم سعی می‌کند با استفاده از عناصر بصری تصویر و استنتاج جمع آوری شده از سوال متنی، پاسخ صحیح را پیدا کند. پرسش و پاسخ تصویری نسخه گسترش یافته مسئله پرسش و پاسخ متنی  است است که اطلاعات بصری به مسئله اضافه شده است. شکل \ref{fig:VQAExample}  گویای تفاوت این دو مسئله است.
+در سال‌های اخیر پیشرفت‌های زیادی در مسائل هوش مصنوعی و یادگیری عمیق که در تقاطع دو حوزه پردازش زبان طبیعی  و بینایی ماشین  قرار می‌گیرند؛ رخ داده است. یکی از مسائلی که اخیراً مورد توجه قرارگرفته است؛ پرسش و پاسخ تصویری  است. با توجه به یک تصویر و یک سؤال به زبان طبیعی، سیستم سعی می‌کند با استفاده از عناصر بصری تصویر و استنتاج جمع آوری شده از سوال متنی، پاسخ صحیح را پیدا کند. 
+	\cite{manmadhan2020visual}
+پرسش و پاسخ تصویری نسخه گسترش یافته مسئله پرسش و پاسخ متنی  است است که اطلاعات بصری به مسئله اضافه شده است. شکل \ref{fig:VQAExample}  گویای تفاوت این دو مسئله است.
 	\begin{figure}
 		\centerline{
 			\includegraphics[scale=0.7]{images/1.JPG}}
@@ -17,13 +19,20 @@
 	در سیستم پرسش و پاسخ متنی، یک متن و یک سوال متنی به عنوان ورودی به سیستم داده می‌شود و انتظار می‌رود که سیستم با توجه به درک و تفسیری که از متن و سوال بدست می‌آورد؛ یک جواب متنی را خروجی دهد. اما در سیستم پرسش و پاسخ تصویری، یک تصویر و یک سوال متنی به ورودی سیستم داده می‌شود و انتظار می‌رود که سیستم بتواند با استفاده از عناصر بصری تصویر و تفسیری که از سوال بدست می‌آورد؛ یک پاسخ متنی را در خروجی نشان دهد.
 	
 	مسئله پرسش و پاسخ تصویری پیچیدگی بیشتری نسبت به مسئله پرسش و پاسخ متنی دارد زیرا تصاویر بعد بالاتر و نویز بیشتری نسبت به متن دارند. علاوه بر این، تصاویر فاقد ساختار و قواعد دستوری زبان هستند. در نهایت هم، تصاویر غنای بیشتری از دنیای واقعی را ضبط می‌کنند، در حالی که زبان طبیعی در حال حاضر نشانگر سطح بالاتری از انتزاع دنیای واقعی است. 
+	\cite{wu2017visual}
 	
 }
 \section{کاربرد و اهمیت مسئله}
 {
 در طی سال‌های متمادی، محققان به دنبال ساخت ماشین‌هایی بودند که به اندازه‌ی کافی باهوش باشند که از آن به طور موثر همانند انسان‌ها برای تعامل استفاده کنند. مسئله‌ی پرسش و پاسخ تصویری یکی از پله‌های رسیدن به این رویای هوش مصنوعی است و از این جهت حائز اهمیت است.
 
-کاربردهای بسیاری برای پرسش و پاسخ تصویری وجود دارد. یکی از مهم‌ترین موارد دستیار هوشمند برای افراد کم‌بینا و نابینا  است. علاوه بر این، در سال های اخیر دستیاران صوتی  و عامل‌های گفتگو  مانند  
+کاربردهای بسیاری برای پرسش و پاسخ تصویری وجود دارد. یکی از مهم‌ترین موارد دستیار هوشمند برای افراد کم‌بینا و نابینا  است.
+	\cite{gurari2018vizwiz}
+ علاوه بر این، در سال های اخیر دستیاران صوتی
+ 	\footnote{\lr{Voice Assistant}}
+   و عامل‌های گفتگو
+    \footnote{\lr{Conversational Agents}}
+     مانند  
 \lr{Cortana}
 ،
 \lr{Siri}
@@ -35,7 +44,7 @@
 }
 \section{بررسی چالشهای موجود در این مسئله}
 باید تکمیل شود.
-\section{بررسی مجموعه دادگان مطرح و مسابقات مطرح این حوزه}
+\section{بررسی مجموعه دادگان مطرح این حوزه}
 در این بخش به معرفی مجموعه‌داده‌های مشهور در حوزه‌ی پرسش و پاسخ تصویری می‌پردازیم و ویژگی‌های هر کدام را بررسی خواهیم کرد. 
 \begin{table}
 	\begin{center}
@@ -43,21 +52,21 @@
 			\hline
 			\textbf{مجموعه‌داده} & \textbf{تعداد تصاویر} & \textbf{تعدادسوالات} & \textbf{سال انتشار} \\
 			\hline \hline
-			\textbf{\lr{DAQUAR}} & 1449 & 12468 & 2014 \\
+			\textbf{\lr{DAQUAR}\cite{malinowski2014multi}} & 1449 & 12468 & 2014 \\
 			\hline
-			\textbf{\lr{VQA v1}} & 204721 & 614163 & 2015 \\
+			\textbf{\lr{VQA v1}\cite{antol2015vqa}} & 204721 & 614163 & 2015 \\
 			\hline
-			\textbf{\lr{VQA v2}} & 0 & 0 & 0 \\
+			\textbf{\lr{VQA v2}\cite{goyal2017making}} & 0 & 0 & 0 \\
 			\hline
-			\textbf{\lr{Visual Madlibs}} & 10738 & 360001 & 2015 \\
+			\textbf{\lr{Visual Madlibs}\cite{yu2015visual}} & 10738 & 360001 & 2015 \\
 			\hline
-			\textbf{\lr{Visual7w}} & 47300 & 2201154 & 2016 \\
+			\textbf{\lr{Visual7w}\cite{zhu2016visual7w}} & 47300 & 2201154 & 2016 \\
 			\hline
-			\textbf{\lr{CLEVR}} & 100000 & 853554 & 2017 \\
+			\textbf{\lr{CLEVR}\cite{johnson2017clevr}} & 100000 & 853554 & 2017 \\
 			\hline
-			\textbf{\lr{Tally-QA}} & 165000 & 306907 & 2019 \\
+			\textbf{\lr{Tally-QA}\cite{acharya2019tallyqa}} & 165000 & 306907 & 2019 \\
 			\hline
-			\textbf{\lr{KVQA}} & 24602 & 183007 & 2019 \\
+			\textbf{\lr{KVQA}\cite{shah2019kvqa}} & 24602 & 183007 & 2019 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -67,7 +76,7 @@
 در جدول 
 \ref{tabel:1}
 اطلاعات آماری این مجموعه‌داده‌ها به صورت خلاصه آمده‌است.
-\subsection{مجموعه داده \lr{DAQUAR}}
+\subsection{مجموعه داده \lr{DAQUAR} \cite{malinowski2014multi}}
 {
 	\textbf{DAQUAR}
 	 مخفف
@@ -80,7 +89,7 @@
  DAQUAR
  شامل \textit{12468} زوج پرسش و پاسخ با 2483 سوال منحصربه‌فرد است. برای تولید پرسش و پاسخ‌ها از دو روش مصنوعی و انسانی استفاده‌شده‌است. در روش مصنوعی پرسش و پاسخ‌ها به صورت خودکار از الگوهای موجود در جدول فلان تولید‌شده‌است. در روش دیگر از 5 نفر انسان خواسته‌شده‌است تا پرسش و پاسخ تولید کنند. تعداد پرسش و پاسخ‌های آموزشی در این مجموعه‌داده 6794 و تعداد پرسش و پاسخ‌های تست 564 است و به طور میانگین برای هر عکس تقریبا 9 پرسش و پاسخ وجود دارد. این مجموعه‌داده با مشکل بایاس روبه‌رو است زیرا تصاویر این مجموعه تنها مربوط به داخل خانه است و بیش از 400 مورد وجود دارد که اشیایی مثل میز و صندلی در پاسخ‌ها تکرارشده‌است.
 }
-\subsection{مجموعه داده \lr{VQA}}
+\subsection{مجموعه داده \lr{VQA} \cite{antol2015vqa} \cite{goyal2017making}}
 {
 مجموعه‌داده
  \lr{Visual Question Answering v1(VQA v1)}
@@ -123,7 +132,7 @@
 تقریبا برای هر سوال دو تصویر مشابه وجود دارد که پاسخ‌های متفاوتی برای سوال دارند.
 }
 
-\subsection{مجموعه داده \lr{Visual Madlibs}}
+\subsection{مجموعه داده \lr{Visual Madlibs} \cite{yu2015visual}}
 {
 	مجموعه‌داده 
 	\lr{Visual Madlibs}
@@ -132,7 +141,7 @@
 	و چند‌گزینه‌ای است.
 }
 
-\subsection{مجموعه داده \lr{Visual7w}}
+\subsection{مجموعه داده \lr{Visual7w}\cite{zhu2016visual7w}}
 {
 	مجموعه‌داده
  \lr{Visual7W}
@@ -160,7 +169,7 @@
   \lr{VQA v1}
   غنی‌تر و سخت‌تر است. همچنین پاسخ‌ها طولانی‌تر هستند
 }
-\subsection{مجموعه داده \lr{CLEVR}}
+\subsection{مجموعه داده \lr{CLEVR}\cite{johnson2017clevr}}
 {
 \lr{CLEVR}
  یک مجموعه‌داده برای ارزیابی درک بصری سیستم‌های 
@@ -171,7 +180,7 @@
    \lr{VQA}
    را مورد ارزیابی قرار می‌دهد از جمله شناسایی ویژگی، شمارش اشیا، مقایسه، روابط مکانی اشیا و عملیات منطقی. در این مجموعه‌داده مکان تصاویر نیز با استفاده از یک مستطیل مشخص‌شده‌است.
 }
-\subsection{مجموعه داده \lr{Tally-QA}}
+\subsection{مجموعه داده \lr{Tally-QA}\cite{acharya2019tallyqa}}
 {
 	در سال 2019، مجموعه‌داده 
    \lr{Tally-QA}
@@ -192,7 +201,7 @@
   جمع‌آوری شده‌است. 
 
  }
-\subsection{مجموعه داده \lr{KVQA}}
+\subsection{مجموعه داده \lr{KVQA}\cite{shah2019kvqa}}
 {
 	مجموعه داده 
 	\lr{KVQA}
@@ -246,13 +255,13 @@
 					\hline
 					\textbf{مدل \lr{CNN}} & \textbf{سال} & \textbf{تعداد لایه‌‌ها} & \textbf{ابعاد ورودی}  & \textbf{ابعاد خروجی(تعداد ویژگی‌ها)} \\
 					\hline \hline
-					\textbf{\lr{AlexNet}} & 2012 & 8 & 227×227 & 4096 \\
+					\textbf{\lr{AlexNet}\cite{hinton2012imagenet}} & 2012 & 8 & 227×227 & 4096 \\
 					\hline
-					\textbf{\lr{VGGNet}} & 2014 & 19 & 224×224 & 4096 \\
+					\textbf{\lr{VGGNet}\cite{simonyan2014very}} & 2014 & 19 & 224×224 & 4096 \\
 					\hline
-					\textbf{\lr{GoogleNet}} & 2014 & 22 & 229×229 & 1024 \\
+					\textbf{\lr{GoogleNet}\cite{szegedy2015going}} & 2014 & 22 & 229×229 & 1024 \\
 					\hline
-					\textbf{\lr{ResNet}} & 2015 & 152 & 224×224 & 20148\\
+					\textbf{\lr{ResNet}\cite{he2016deep}} & 2015 & 152 & 224×224 & 20148\\
 					\hline
 				\end{tabular}
 			\end{center}
@@ -273,63 +282,63 @@
 					\hline
 					\textbf{مدل پرسش و پاسخ تصویری} & \textbf{AlexNet} & \textbf{VGGNet} & \textbf{GoogleNet}  & \textbf{ResNet}\\
 					\hline \hline
-					\textbf{\lr{Image\_QA}} &  & \checkmark&  & \\
+					\textbf{\lr{Image\_QA}\cite{ren2015image}} &  & \checkmark&  & \\
 					\hline
-					\textbf{\lr{Talk\_to\_Machine}} &  &  & \checkmark &  \\
+					\textbf{\lr{Talk\_to\_Machine}\cite{gao2015you}} &  &  & \checkmark &  \\
 					\hline
-					\textbf{\lr{VQA}} &  & \checkmark &  &  \\
+					\textbf{\lr{VQA}\cite{antol2015vqa}} &  & \checkmark &  &  \\
 					\hline
-					\textbf{\lr{Vis\_Madlibs}} & \checkmark &  &  & \\
+					\textbf{\lr{Vis\_Madlibs}\cite{yu2015visual}} & \checkmark &  &  & \\
 					\hline
-					\textbf{\lr{VIS + LSTM}} &  & \checkmark  &  & \\
+					\textbf{\lr{VIS + LSTM}\cite{ren2015exploring}} &  & \checkmark  &  & \\
 					\hline
-					\textbf{\lr{Ahab}} &  & \checkmark &  &  \\
+					\textbf{\lr{Ahab}\cite{wang2015explicit}} &  & \checkmark &  &  \\
 					\hline
-					\textbf{\lr{ABC\-CNN}} &  & \checkmark &  & \\
+					\textbf{\lr{ABC-CNN}\cite{chen2015abc}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{Comp\_QA}} &  & \checkmark &  & \\
+					\textbf{\lr{Comp\_QA}\cite{andreas2015deep}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{DPPNet}} &  & \checkmark &  & \\
+					\textbf{\lr{DPPNet}\cite{noh2016image}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{Answer\_CNN}} &  & \checkmark &  & \\
+					\textbf{\lr{Answer\_CNN}\cite{Ma2016LearningTA}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{VQA\-Caption}} &  & \checkmark &  & \\
+					\textbf{\lr{VQA-Caption}\cite{lin2016leveraging}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{Re\_Baseline}} &  &  &  & \checkmark\\
+					\textbf{\lr{Re\_Baseline}\cite{jabri2016revisiting}} &  &  &  & \checkmark\\
 					\hline
-					\textbf{\lr{MCB}} &  &  &  & \checkmark \\
+					\textbf{\lr{MCB}\cite{fukui2016multimodal}} &  &  &  & \checkmark \\
 					\hline
-					\textbf{\lr{SMem-VQA}} &  &  & \checkmark & \\
+					\textbf{\lr{SMem-VQA}\cite{xu2016ask}} &  &  & \checkmark & \\
 					\hline
-					\textbf{\lr{Region\_VQA}} &  & \checkmark &  & \\
+					\textbf{\lr{Region\_VQA}\cite{shih2016look}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{Vis7W}} &  & \checkmark &  & \\
+					\textbf{\lr{Vis7W}\cite{zhu2016visual7w}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{Ask\_Neuron}} & \checkmark & \checkmark & \checkmark & \checkmark \\
+					\textbf{\lr{Ask\_Neuron}\cite{malinowski2017ask}} & \checkmark & \checkmark & \checkmark & \checkmark \\
 					\hline
-					\textbf{\lr{SCMC}} &  &  &  & \checkmark \\
+					\textbf{\lr{SCMC}\cite{cao2017jointly}} &  &  &  & \checkmark \\
 					\hline
-					\textbf{\lr{HAN}} &  &  &  & \checkmark\\
+					\textbf{\lr{HAN}\cite{malinowski2018learning}} &  &  &  & \checkmark\\
 					\hline
-					\textbf{\lr{StrSem}} &  & \checkmark &  & \\
+					\textbf{\lr{StrSem}\cite{yu2018beyond}} &  & \checkmark &  & \\
 					\hline
-					\textbf{\lr{AVQAN}} &  &  &  & \checkmark \\
+					\textbf{\lr{AVQAN}\cite{ruwa2018affective}} &  &  &  & \checkmark \\
 					\hline
-					\textbf{\lr{CMF}} &  &  &  & \checkmark\\
+					\textbf{\lr{CMF}\cite{lao2018cross}} &  &  &  & \checkmark\\
 					\hline
-					\textbf{\lr{EnsAtt}} &  &  &  & \checkmark \\
+					\textbf{\lr{EnsAtt}\cite{lioutas2018explicit}} &  &  &  & \checkmark \\
 					\hline
-					\textbf{\lr{MetaVQA}} &  &  &  & \checkmark\\
+					\textbf{\lr{MetaVQA}\cite{teney2018visual}} &  &  &  & \checkmark\\
 					\hline
-					\textbf{\lr{DA-NTN}} &  &  &  & \checkmark \\
+					\textbf{\lr{DA-NTN}\cite{bai2018deep}} &  &  &  & \checkmark \\
 					\hline
-					\textbf{\lr{QGHC}} &  &  &  & \checkmark\\
+					\textbf{\lr{QGHC}\cite{cao2017jointly}} &  &  &  & \checkmark\\
 					\hline
-					\textbf{\lr{QTA}} &  &  &  & \checkmark\\
+					\textbf{\lr{QTA}\cite{shi2018question}} &  &  &  & \checkmark\\
 					\hline
-					\textbf{\lr{WRAN}} &  &  &  & \checkmark \\
+					\textbf{\lr{WRAN}\cite{peng2019word}} &  &  &  & \checkmark \\
 					\hline
-					\textbf{\lr{QAR}} &  &  &  & \checkmark \\
+					\textbf{\lr{QAR} \cite{toor2019question}} &  &  &  & \checkmark \\
 					\hline
 				\end{tabular}
 			\end{center}
@@ -446,59 +455,59 @@
 		 			\textbf{مدل پرسش و پاسخ تصویری} & \textbf{\lr{one-hot}} & \textbf{\lr{CBOW}} & \textbf{\lr{Skip-gram/word2vec}}  & \textbf{\lr{GloVe}} & \textbf{\lr{CNN}} & 
 		 			\textbf{\lr{LSTM}} & \textbf{\lr{GRU}}\\
 		 			\hline \hline
-		 			\textbf{\lr{Image\_QA}} &  &  & \checkmark &  &  &  & \\
+		 			\textbf{\lr{Image\_QA}\cite{ren2015image}} &  &  & \checkmark &  &  &  & \\
 		 			\hline
-		 			\textbf{\lr{Talk\_to\_Machine}} &  &  &  &  &  & \checkmark &    \\
+		 			\textbf{\lr{Talk\_to\_Machine}\cite{gao2015you}} &  &  &  &  &  & \checkmark &    \\
 		 			\hline
-		 			\textbf{\lr{VQA}} &  & \checkmark &  &  &  &  &  \\
+		 			\textbf{\lr{VQA}\cite{antol2015vqa}} &  & \checkmark &  &  &  &  &  \\
 		 			\hline
-		 			\textbf{\lr{Vis\_Madlibs}} &  &  & \checkmark &  &  &  &  \\
+		 			\textbf{\lr{Vis\_Madlibs}\cite{yu2015visual}} &  &  & \checkmark &  &  &  &  \\
 		 			\hline
-		 			\textbf{\lr{VIS + LSTM}} &  &  &  &  &  & \checkmark &  \\
+		 			\textbf{\lr{VIS + LSTM}\cite{ren2015exploring}} &  &  &  &  &  & \checkmark &  \\
 		 			\hline
-		 			\textbf{\lr{ABC\-CNN}} &  &  &  &  &  & \checkmark &  \\
+		 			\textbf{\lr{ABC-CNN}\cite{chen2015abc}} &  &  &  &  &  & \checkmark &  \\
 		 			\hline
-		 			\textbf{\lr{Comp\_QA}} &  &  &  &  &  & \checkmark &  \\
+		 			\textbf{\lr{Comp\_QA}\cite{andreas2015deep}} &  &  &  &  &  & \checkmark &  \\
 		 			\hline
-		 			\textbf{\lr{DPPNet}} &  &  &  &  &  &  & \checkmark \\
+		 			\textbf{\lr{DPPNet}\cite{noh2016image}} &  &  &  &  &  &  & \checkmark \\
 		 			\hline
-		 			\textbf{\lr{Answer\_CNN}} &  &  &  &  & \checkmark &  &  \\
+		 			\textbf{\lr{Answer\_CNN}\cite{Ma2016LearningTA}} &  &  &  &  & \checkmark &  &  \\
 		 			\hline
-		 			\textbf{\lr{VQA-Caption}} &  &  &  &  &  & \checkmark &  \\
+		 			\textbf{\lr{VQA-Caption}\cite{lin2016leveraging}} &  &  &  &  &  & \checkmark &  \\
 		 			\hline
-		 			\textbf{\lr{Re\_Baseline}} &  &  & \checkmark &  &  &  & \\
+		 			\textbf{\lr{Re\_Baseline}\cite{jabri2016revisiting}} &  &  & \checkmark &  &  &  & \\
 		 			\hline
-		 			\textbf{\lr{MCB}} &  &  &  &   &  & \checkmark &  \\
+		 			\textbf{\lr{MCB}\cite{fukui2016multimodal}} &  &  &  &   &  & \checkmark &  \\
 		 			\hline
-		 			\textbf{\lr{SMem-VQA}} &  & \checkmark &   &  &  &  & \\
+		 			\textbf{\lr{SMem-VQA}\cite{xu2016ask}} &  & \checkmark &   &  &  &  & \\
 		 			\hline
-		 			\textbf{\lr{Region\_VQA}} &  &  & \checkmark &  &  &  &  \\
+		 			\textbf{\lr{Region\_VQA}\cite{shih2016look}} &  &  & \checkmark &  &  &  &  \\
 		 			\hline
-		 			\textbf{\lr{Vis7W}} & \checkmark &  &  &  &  &  &  \\
+		 			\textbf{\lr{Vis7W}\cite{zhu2016visual7w}} & \checkmark &  &  &  &  &  &  \\
 		 			\hline
-		 			\textbf{\lr{Ask\_Neuron}} &  & \checkmark &  &  & \checkmark & \checkmark & \checkmark  \\
+		 			\textbf{\lr{Ask\_Neuron}\cite{malinowski2017ask}} &  & \checkmark &  &  & \checkmark & \checkmark & \checkmark  \\
 		 			\hline
-		 			\textbf{\lr{SCMC}} &  &  &  &  & \checkmark &  &  \\
+		 			\textbf{\lr{SCMC}\cite{cao2017jointly}} &  &  &  &  & \checkmark &  &  \\
 		 			\hline
-		 			\textbf{\lr{HAN}} &  &  &  &  &  & \checkmark & \\
+		 			\textbf{\lr{HAN}\cite{malinowski2018learning}} &  &  &  &  &  & \checkmark & \\
 		 			\hline
-		 			\textbf{\lr{StrSem}} &  &  &  &  &  & \checkmark &  \\
+		 			\textbf{\lr{StrSem}\cite{yu2018beyond}} &  &  &  &  &  & \checkmark &  \\
 		 			\hline
-		 			\textbf{\lr{AVQAN}} & \checkmark &  &  &  &  &  &  \\
+		 			\textbf{\lr{AVQAN}\cite{ruwa2018affective}} & \checkmark &  &  &  &  &  &  \\
 		 			\hline
-		 			\textbf{\lr{CMF}} &  &  &  & \checkmark  &  & \checkmark & \\
+		 			\textbf{\lr{CMF}\cite{lao2018cross}} &  &  &  & \checkmark  &  & \checkmark & \\
 		 			\hline
-		 			\textbf{\lr{EnsAtt}} &  &  &  & \checkmark  &  &  &  \\
+		 			\textbf{\lr{EnsAtt}\cite{lioutas2018explicit}} &  &  &  & \checkmark  &  &  &  \\
 		 			\hline
-		 			\textbf{\lr{MetaVQA}} &  &  &  & \checkmark  &  &  & \checkmark\\
+		 			\textbf{\lr{MetaVQA}\cite{teney2018visual}} &  &  &  & \checkmark  &  &  & \checkmark\\
 		 			\hline
-		 			\textbf{\lr{DA-NTN}} &  &  &  &  &  &  & \checkmark \\
+		 			\textbf{\lr{DA-NTN}\cite{bai2018deep}} &  &  &  &  &  &  & \checkmark \\
 		 			\hline
-		 			\textbf{\lr{QGHC}} &  &  &  &  &  &  & \checkmark \\
+		 			\textbf{\lr{QGHC}\cite{cao2017jointly}} &  &  &  &  &  &  & \checkmark \\
 		 			\hline
-		 			\textbf{\lr{WRAN}} &  &  &  &   &  &  & \checkmark \\
+		 			\textbf{\lr{WRAN} \cite{peng2019word}} &  &  &  &   &  &  & \checkmark \\
 		 			\hline
-		 			\textbf{\lr{QAR}} &  &  &  & \checkmark  &  &  &  \\
+		 			\textbf{\lr{QAR}\cite{toor2019question}} &  &  &  & \checkmark  &  &  &  \\
 		 			\hline
 		 		\end{tabular}
 		 	\end{center}
@@ -551,7 +560,7 @@
 		معیار دقت سخت‌گیرانه است زیرا فقط در حالتی که پاسخ مدل کاملا مطابق با پاسخ در نظر گرفته شده باشد، پذیرفته می‌‌شود. برای مثال اگر صورت سوال «چه حیواناتی در تصویر است؟» باشد و پاسخ مدل به جای «سگ‌ها‌» پاسخ «سگ» باشد؛ غلط تلقی می‌شود. بنابراین به دلیل این محدودیت‌هایی که معیار دقت دارد؛ معیارهای دیگری برای ارزیابی این نوع سوالات پیشنهاد‌ شده‌است.
 	}
 	
-	\subsection{معیار شباهت \lr{Wu-Palmer}}
+	\subsection{معیار شباهت \lr{Wu-Palmer}\cite{wu1994verb}}
 	{
 	این معیار ارزیابی توسط مالینوفسکی برای پرسش و پاسخ تصویری ارائه شد. این معیار از تئوری مجموعه‌های فازی الهام گرفته شده است و نسبت به معیار دقت سخت‌گیری کمتری دارد. معیار شباهت 
 	\lr{Wu-Palmer}
@@ -560,12 +569,16 @@
 
 	\subsection{معیار اجماع}
 	{
-		از این معیار زمانی استفاده می‌شود که هر سوال توسط کاربرهای انسانی متفاوتی پاسخ داده شود. در واقع برای هر سوال چندین پاسخ مستقل وجود داشته باشد. این معیار دو نوع دارد: میانگین اجماع و کمترین اجماع. در میانگین اجماع امتیاز نهایی برابر با میانگین وزندار پاسخ‌های وارد شده توسط کاربرهای متفاوت است و در کمترین اجماع پاسخ پیش‌بینی شده حداقل باید با یکی از پاسخ‌ها مطابقت داشته باشد. در مسئله‌ی پرسش و پاسخ تصویری معمولا از حالت کمترین اجماع استفاده می‌شود و آستانه را هم برابر 3 قرار می‌دهند به این معنی که اگر پاسخ پیش‌بینی شده با 3 و یا بیشتر از 3 پاسخ برابر باشد امتیاز کامل می‌گبرد و در غیر این صورت هیچ امتیازی کسب نخواهد کرد. از معایب این روش می‌توان به هزینه زیاد جمع‌آوری پاسخ برای سوالات اشاره کرد.
+		از این معیار زمانی استفاده می‌شود که هر سوال توسط کاربرهای انسانی متفاوتی پاسخ داده شود. در واقع برای هر سوال چندین پاسخ مستقل وجود داشته باشد. این معیار دو نوع دارد: میانگین اجماع و کمترین اجماع. در میانگین اجماع امتیاز نهایی برابر با میانگین وزندار پاسخ‌های وارد شده توسط کاربرهای متفاوت است و در کمترین اجماع پاسخ پیش‌بینی شده حداقل باید با یکی از پاسخ‌ها مطابقت داشته باشد. در مسئله‌ی پرسش و پاسخ تصویری معمولا از حالت کمترین اجماع استفاده می‌شود و آستانه را هم برابر 3 قرار می‌دهند به این معنی که اگر پاسخ پیش‌بینی شده با 3 و یا بیشتر از 3 پاسخ برابر باشد امتیاز کامل می‌گبرد و در غیر این صورت هیچ امتیازی کسب نخواهد کرد. از معایب این روش می‌توان به هزینه زیاد جمع‌آوری پاسخ برای سوالات اشاره کرد. آنتول و همکارانش از این معیار ارزیابی در 
+		\cite{antol2015vqa}
+		استفاده کرده‌اند.
 	}
 
-.	\subsection{\lr{MPT} }
+.	\subsection{\lr{MPT}\cite{kafle2017analysis}}
 	{
-		یکی از مشکلات مجموعه‌داده‌های پرسش و پاسخ تصویری توزیع غیریکنواخت انواع سوال‌هاست. دراین مواقع، نمی‌توان از معیار دقت استفاده کرد. بنابراین  در ... معیار جدیدی به نام 
+		یکی از مشکلات مجموعه‌داده‌های پرسش و پاسخ تصویری توزیع غیریکنواخت انواع سوال‌هاست. دراین مواقع، نمی‌توان از معیار دقت استفاده کرد. بنابراین  در 
+	\cite{kafle2017analysis}
+		 معیار جدیدی به نام 
 	\lr{MPT} 
 	\footnote{\lr{Mean Per Type}}
 		ارائه شده است که توزیع نامتوازن سوال‌ها را جبران می‌کند. معیار 
@@ -573,7 +586,7 @@
 	میانگین دقت برای هر نوع سوال را محاسبه می‌کند. از نسخه‌ی نرمالایز شده‌ی این معیار نیز برای رفع مشکل بایاس در توزیع پاسخ‌ها استفاده می‌شود.
 	}
 
-	\subsection{\lr{BLEU} }
+	\subsection{\lr{BLEU}\cite{papineni2002bleu}}
 	{
 		\lr{BLEU}
 		\footnote{\lr{BiLingual Evaluation Understudy}}
@@ -587,7 +600,7 @@
 		
 	}
 
-	\subsection{\lr{METEOR}}
+	\subsection{\lr{METEOR}\cite{denkowski2014meteor}}
 	{
 		\lr{METEOR}
 		\footnote{\lr{Metric for Evaluation of Translation with Explicit ORdering}}
