@@ -63,6 +63,8 @@
 \section{بررسی مجموعه دادگان مطرح این حوزه}
 در این بخش به معرفی مجموعه‌داده‌های مشهور در حوزه‌ی پرسش و پاسخ تصویری می‌پردازیم و ویژگی‌های هر کدام را بررسی خواهیم کرد. 
 \begin{table}
+	\caption{بررسی اجمالی مجموعه‌داده‌های معروف در حوزه پرسش و پاسخ تصویری.}
+	\label{tabel:1}
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
@@ -86,8 +88,6 @@
 			\hline
 		\end{tabular}
 	\end{center}
-	\caption{بررسی اجمالی مجموعه‌داده‌های معروف در حوزه پرسش و پاسخ تصویری.}
-	\label{tabel:1}
 \end{table}
 در جدول 
 \ref{tabel:1}
@@ -106,6 +106,13 @@
  \lr{DAQUAR}
  شامل 12468 زوج پرسش و پاسخ با 2483 سوال منحصربه‌فرد است. برای تولید پرسش و پاسخ‌ها از دو روش مصنوعی و انسانی استفاده‌شده‌است. 
  \begin{table}
+ 	 \caption{
+ 		الگوهای استفاده شده برای تولید  سوال در مجموعه‌داده 
+ 		\lr{DAQUAR}.
+ 		سوالات می‌تواند در مورد یک تصویر و یا مجموعه‌ای از تصاویر باشد
+ 		\cite{malinowski2014multi}
+ 	.}
+ 	\label{tabel:5}
  	\resizebox{\textwidth}{!}{\begin{tabular}{ |c|c|c|c| } 
  			\hline
  			 & \textbf{توضیح} & \textbf{الگو} & \textbf{نمونه}  \\
@@ -150,13 +157,6 @@
 			& \lr{Which images have desk but do not have a lamp?} \\
  			\hline
  		\end{tabular}}
- 	\caption{
- 		الگوهای استفاده شده برای تولید  سوال در مجموعه‌داده 
- 		\lr{DAQUAR}.
- 		 سوالات می‌تواند در مورد یک تصویر و یا مجموعه‌ای از تصاویر باشد
- 		\cite{malinowski2014multi}
- 		 .}
- 	\label{tabel:5}
  \end{table}
  در روش مصنوعی پرسش و پاسخ‌ها به صورت خودکار از الگوهای موجود در جدول
  \ref{tabel:5}
@@ -380,6 +380,10 @@
 		
 		یکی از بهترین شبکه‌های عصبی برای استخراج ویژگی از تصویر، شبکه‌های عصبی کانولوشنی هستند. 
 		\begin{table}
+			\caption{بررسی اجمالی مهم‌ترین شبکه‌های عصبی کانولوشنی که بر روی مجموعه‌داده
+				\lr{ImageNet}
+				آموزش ‌داده شده.}
+			\label{tabel:2}
 			\begin{center}
 				\begin{tabular}{ |c|c|c|c|c| } 
 					\hline
@@ -395,10 +399,6 @@
 					\hline
 				\end{tabular}
 			\end{center}
-			\caption{بررسی اجمالی مهم‌ترین شبکه‌های عصبی کانولوشنی که بر روی مجموعه‌داده
-				\lr{ImageNet}
-				آموزش ‌داده شده.}
-			\label{tabel:2}
 		\end{table}
 		 در جدول 
 		\ref{tabel:2}
@@ -408,6 +408,8 @@
 		آموزش ‌داده شده‌اند؛
 		آورده شده است. بیشتر مدل‌های ارائه‌شده در پرسش و پاسخ تصویری از این شبکه‌های عصبی کانولوشنی استفاده می‌کنند تا محتوای تصویری خود را به بردار‌هایی عددی تبدیل کنند.
 		\begin{table}
+			\caption{شبکه‌های عصبی کانولوشنی استفاده شده در مدل‌های پرسش و پاسخ تصویری.}
+			\label{tabel:3}
 			\begin{center}
 				\begin{tabular}{ |c|c|c|c|c| } 
 					\hline
@@ -473,8 +475,6 @@
 					\hline
 				\end{tabular}
 			\end{center}
-			\caption{شبکه‌های عصبی کانولوشنی استفاده شده در مدل‌های پرسش و پاسخ تصویری.}
-			\label{tabel:3}
 		\end{table}
 		جدول 
 		\ref{tabel:3}
@@ -597,6 +597,10 @@
 		 \lr{word embedding}
 		 های ذکر شده در بالا برای تولید بردار ویژگی برای سوال‌ها استفاده کرده‌اند.
 		 \begin{table}
+		 	\caption{
+		 		\lr{word embedding}
+		 		های استفاده شده در مدل‌های پرسش و پاسخ تصویری.}
+		 	\label{tabel:4}
 		 	\begin{center}
 		 		\resizebox{\textwidth}{!}{\begin{tabular}{ |c|c|c|c|c|c|c|c| } 
 		 			\hline
@@ -659,10 +663,6 @@
 		 			\hline
 		 		\end{tabular}}
 		 	\end{center}
-		 	\caption{
-		 		\lr{word embedding}
-		 		 های استفاده شده در مدل‌های پرسش و پاسخ تصویری.}
-		 	\label{tabel:4}
 		 \end{table}
 		 جدول 
 		 \ref{tabel:4}

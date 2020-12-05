@@ -1,5 +1,5 @@
 % !TeX document-id = {a20f43b2-ab4e-4871-aad0-cb417dac4610}
-% !TEX TS-program = XeLaTeX
+% !TEX TS-program = xelatex
 % Commands for running this example:
 % 	 xelatex main
 % 	 bibtex8 -W -c cp1256fa main
@@ -17,17 +17,14 @@
 
 \pagenumbering{harfi}
 \input{faTitle}
-\tableofcontents
 
-\newpage
-\listoffigures \newpage
-\listoftables  \newpage
+\tableofcontents \newpage
+\listoffigures   \newpage
+\listoftables    \newpage
 
 \pagestyle{fancy}
-
 \include{intro}
 
-% مراجع
 \pagestyle{empty}
 {
 \onehalfspacing
@@ -37,13 +34,12 @@
 
 \pagestyle{fancy}
 
-
-%\baselineskip=.75cm
 \onehalfspacing
-%\include{dicfa2en}
-%\include{dicen2fa}
+\include{dicfa2en}
+\include{dicen2fa}
 \printindex
 
-%\label{LastPage}
+\input{enTitle}
+\label{LastPage}
 
 \end{document}
