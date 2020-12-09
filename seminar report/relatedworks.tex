@@ -1063,8 +1063,84 @@
 	 و
 	\lr{LXMERT}\cite{tan2019lxmert}
   نمونه‌هایی از معماری دو جریان هستند که از این دو مدل می‌توان برای مسئله پرسش و پاسخ تصویری استفاده کرد. پس در ادامه این بخش، جزئیات این دو شبکه را بررسی خواهیم کرد.
-
-   
+  
+	\begin{figure}
+	 	\centerline{\includegraphics[scale=0.6]{images/VilBERT.JPG}}
+	 	\caption[معماری شبکه از قبل آموزش‌دیده\lr{ViLBERT}]{معماری شبکه از قبل آموزش‌دیده\lr{ViLBERT}\cite{lu2019vilbert}}
+	 	\label{fig:ViLBERT}
+	\end{figure}
+	
+	شکل
+	\ref{fig:ViLBERT}
+	معماری شبکه 
+	\lr{ViLBERT}
+	را نمایش می‌دهد. مدل 
+	\lr{ViLBERT}
+	شامل دو مدل موازی به سبک
+	\lr{BERT}
+	است که به صورت جداگانه بر روی کلمات متن و 
+	\lr{ROI}
+	های تصویر اعمال می‌شود و از بلوک‌های ترنسفورمر در هر جریان استفاده شده است(در شکل 
+	\ref{fig:ViLBERT}
+	با 
+	\lr{TRM}
+	مشخص شده است.). سپس برای بدست آوردن بازنمایی مشترک بین متن و تصویر از لایه‌های 
+	\lr{co-attentional transformer}
+	استفاده شده است(در شکل 
+	\ref{fig:ViLBERT}
+	با 
+	\lr{Co-TRM}
+	مشخص شده است.). اساس لایه‌ی 
+	\lr{co-attentional transformer}
+    بر پایه‌ی ترنسفرمر است در واقع برای هر کدام از بخش‌های تصویری و متنی داده ورودی، یک ترنسفرمر در لایه 
+    \lr{co-attentional transformer}
+    در نظر گرفته شده است که پس از عبور متن و داده از جریان‌های مستقل خود و بدست آمدن 
+	\lr{query}
+	،
+	\lr{key}
+	و
+	\lr{value}
+	برای هر کدام، 
+	\lr{key}
+	و
+	\lr{value}
+	متن به ترنسفرمر تصویر در 
+	\lr{co-attentional transformer}
+	داده می‌شود و به صورت متقابل
+	\lr{key}
+	و
+	\lr{value}
+	تصویر به ترنسفرمر متن داده می‌شود. 
+	
+	\begin{figure}
+		\centerline{\includegraphics[scale=0.6]{images/coattentional.JPG}}
+		\caption[معماری شبکه از قبل آموزش‌دیده\lr{ViLBERT}]{معماری شبکه از قبل آموزش‌دیده\lr{ViLBERT}\cite{lu2019vilbert}}
+		\label{fig:coattentional}
+	\end{figure}
+	شکل 
+	\ref{fig:coattentional}
+	ساختار لایه
+	\lr{co-attentional transformer}
+	را نشان می‌دهد. برای آموزش مدل
+	\lr{ViLBERT}
+	از توابع هدف
+	\lr{visual-based Masked Language Model}
+	،
+	\lr{text-based Masked Language Model}
+	و 
+	\lr{visual-linguistic matching}
+	استفاده شده است. شبکه
+	\lr{ViLBERT}
+	بر روی مجموعه‌داده
+	\lr{Conceptual Captions}
+	آموزش داده شده است. برای استفاده از شبکه از قبل آموزش‌دیده
+	\lr{ViLBERT}
+	برای مسئله پرسش و پاسخ تصویری، ابتدا خروجی بازنمایی توکن
+	\lr{[CLS]}
+	و بازنمایی تصویر ضرب متناظر می‌شوند. سپس با عبور از یک شبکه 
+	\lr{MLP}
+	دولایه پاسخ مربوط به سوال و تصویر حاصل می‌شود.
+	
 
 \section{معیارهای ارزیابی مسئله پرسش و پاسخ تصویری}
 
