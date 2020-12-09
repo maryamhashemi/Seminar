@@ -2,6 +2,9 @@
 %-------------------------------------------------------------------------------------------------------------------
 
 % در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
+\usepackage{tabularx,ragged2e}
+\newcolumntype{C}{>{\Centering\arraybackslash}X}
+
 \usepackage{amsthm,amssymb,amsmath}
 % بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
 \usepackage[top=40mm, bottom=40mm, left=25mm, right=35mm]{geometry}
@@ -48,6 +51,7 @@
 
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % دستوری برای حذف کلمه «چکیده»
 \renewcommand{\abstractname}{}

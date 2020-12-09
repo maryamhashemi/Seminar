@@ -1114,7 +1114,7 @@
 	
 	\begin{figure}
 		\centerline{\includegraphics[scale=0.6]{images/coattentional.JPG}}
-		\caption[معماری شبکه از قبل آموزش‌دیده\lr{ViLBERT}]{معماری شبکه از قبل آموزش‌دیده\lr{ViLBERT}\cite{lu2019vilbert}}
+		\caption[ساختار لایه \lr{co-attentional transformer}]{ساختار لایه \lr{co-attentional transformer}\cite{lu2019vilbert}}
 		\label{fig:coattentional}
 	\end{figure}
 	شکل 
@@ -1140,6 +1140,129 @@
 	و بازنمایی تصویر ضرب متناظر می‌شوند. سپس با عبور از یک شبکه 
 	\lr{MLP}
 	دولایه پاسخ مربوط به سوال و تصویر حاصل می‌شود.
+	
+	\begin{figure}
+		\centerline{\includegraphics[scale=0.6]{images/LXMERT.JPG}}
+		\caption[ معماری شبکه از قبل آموزش‌دیده \lr{LXMERT}]{معماری شبکه از قبل آموزش‌دیده \lr{LXMERT}\cite{tan2019lxmert}}
+		\label{fig:LXMERT}
+	\end{figure}
+	
+	شکل 
+	\ref{fig:LXMERT}
+	معماری مدل
+	\lr{LXMERT}
+	را نشان می‌دهد. ورودی این شبکه کلمات جمله ورودی و 
+	\lr{ROI}
+	های استخراج شده از تصویر است. همان‌طور که قبلا اشاره شد؛ مدل
+	\lr{LXMERT}
+	یک مدل دو جریان است به همین دلیل برای پردازش متن و تصویر از دو رمزگذار مجزا و مستقل استفاده شده است(در شکل 
+	\ref{fig:LXMERT}
+	به ترتیب با عنوان‌های  
+	\lr{ObjectRel Encoder}
+	و 
+	\lr{Language Encoder}
+	برای تصویر و متن مشخص شده است.
+	) و سپس برای بدست آوردن بازنمایی مشترک از رمزگذار
+	\lr{Cross-modality}
+	استفاده شده است. توابع هدف استفاده شده در مدل
+	\lr{LXMERT}
+	مشابه شبکه 
+	\lr{ViLBERT}
+	است اما در 
+	\lr{LXMERT}
+	از تابع هدف دیگری به نام 
+	\lr{image question answering}
+	برای آموزش شبکه استفاده شده است. زیرا حدود $1/3$ داده‌ای که برای آموزش این شبکه استفاده شده است؛ یک سوال در مورد تصویر ورودی است. بنابراین با تعریف تابع هدف 
+	\lr{image question answering}
+	مدل سعی ‌می‌کند تا پاسخ این سوال را در خروجی پیش‌بینی کند. برای آموزش شبکه
+	\lr{LXMERT}
+	از مجموعه‌داده‌های 
+	\lr{MS COCO}
+	،
+	\lr{Visual Genome}
+	،
+	\lr{VQA v2.0}
+	،
+	\lr{GQA balanced version}
+	و
+	\lr{VG-QA}
+	استفاده شده است.
+	\begin{table}
+		\caption{}
+		\label{tabel:7}
+		\centering
+		\setlength\extrarowheight{2pt}
+		\begin{tabularx}{\textwidth}{|C|C|C|C|C|}
+			\hline
+			\textbf{روش} & \textbf{معماری} &  \textbf{ورودی} & \textbf{مجموعه‌داده‌های استفاده شده برای آموزش} & \textbf{توابع هدف}\\
+			\hline \hline
+			
+			\textbf{\cite{su2019vl}\lr{VL-BERT}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر &\lr{Conceptual Captions + BooksCorpus + English Wikipedia}&
+			\lr{text-based MLM + visual-based MLM}\\
+			\hline
+			\textbf{\cite{chen2020uniter}\lr{UNITER}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر & \lr{COCO + Visual Genome + Conceptual Captions + 
+			SBU Captions} & \lr{text-based MLM + visual-based MLM + Image-Text Matching + Word-Region Alignment}\\
+			\hline
+			\textbf{\cite{li2020oscar}\lr{OSCAR}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر  & \lr{Conceptual Captions} & \lr{text-based MLM + visual-based MLM + Image-Text Matching + Word-Region Alignment}\\
+			\hline
+			\textbf{\cite{zhou2020unified}\lr{VLP}}& تک جریان & - & - & -\\
+			\hline \hline
+			\textbf{\cite{lu2019vilbert}\lr{ViL-BERT}}& دو جریان & - & - & -\\
+			\hline
+			\textbf{\cite{tan2019lxmert}\lr{LXMERT}}& دو جریان & - & - & -\\
+			\hline		
+		\end{tabularx}
+	\end{table}
+
+
+	\begin{table}
+		\caption{دقت شبکه‌های از قبل آموزش‌دیده بر روی مجموعه‌داده 
+		\lr{VQA v2.0 (test-std)}}
+		\label{tabel:6}
+		\begin{center}
+			{\begin{tabular}{ |c|c|c|c|c| } 
+					\hline
+					\textbf{دقت کل} & \textbf{سایر سوالات} &  \textbf{سوالات شمارشی} & \textbf{سوالات بله/خیر} & \textbf{روش}\\
+					\hline \hline	
+					$70.7$  & $60.5$ & $52.1$ & $87.4$ &\textbf{\cite{zhou2020unified}\lr{VLP}} \\
+					\hline
+					$70.92$ & - & - & - &\textbf{\cite{lu2019vilbert}\lr{ViL-BERT}}\\
+					\hline
+					$72.22$ & - & - & - &\textbf{\cite{su2019vl}\lr{VL-BERT}}  \\
+					\hline
+					$72.5 $  & $63.1$ & $54.2$ & $88.2$ &\textbf{\cite{tan2019lxmert}\lr{LXMERT}}\\
+					\hline
+					$73.82$& - & - & - &\textbf{\cite{li2020oscar}\lr{OSCAR}}\\
+					\hline
+					$74.02$ & - & - & - &\textbf{\cite{chen2020uniter}\lr{UNITER}} \\
+					\hline
+			\end{tabular}}
+		\end{center}
+	\end{table}
+
+	در جدول 
+	\ref{tabel:6}
+	نتایج مدل‌‌های 
+	\lr{VL-BERT}
+	،
+	\lr{UNITER}
+	،
+	\lr{VLP}
+	،
+	\lr{OSCAR}
+	،
+	\lr{ViL-BERT}
+	و
+	\lr{LXMERT}
+	بر روی مجموعه‌داده
+	\lr{VQA v2.0}
+	نشان داده شده است. بهترین نتیجه بدست آمده برای مدل
+	\lr{UNITER}
+	است. یکی از نکات قابل ملاحظه در این جدول این است که مدل‌های تک جریان نتایج بهتری نسبت به مدل‌های دو جریان بدست آوردند در حالی که تعداد پارامترهای مدل‌های تک جریان نسبت به مدل‌های دو جریان کمتر است.
+	
+	
+	
+	
 	
 
 \section{معیارهای ارزیابی مسئله پرسش و پاسخ تصویری}
