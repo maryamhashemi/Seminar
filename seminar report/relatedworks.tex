@@ -1188,11 +1188,11 @@
 	\lr{VG-QA}
 	استفاده شده است.
 	\begin{table}
-		\caption{}
-		\label{tabel:7}
+		\caption{مقایسه بین شبکه‌های از قبل آموزش‌دیده بر روی زبان طبیعی و تصویر }
+		\label{tabel:6}
 		\centering
-		\setlength\extrarowheight{2pt}
-		\begin{tabularx}{\textwidth}{|C|C|C|C|C|}
+		\setlength\extrarowheight{1pt}
+		\begin{tabularx}{\textwidth}{|B|S|M|B|B|}
 			\hline
 			\textbf{روش} & \textbf{معماری} &  \textbf{ورودی} & \textbf{مجموعه‌داده‌های استفاده شده برای آموزش} & \textbf{توابع هدف}\\
 			\hline \hline
@@ -1200,25 +1200,49 @@
 			\textbf{\cite{su2019vl}\lr{VL-BERT}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر &\lr{Conceptual Captions + BooksCorpus + English Wikipedia}&
 			\lr{text-based MLM + visual-based MLM}\\
 			\hline
+			
 			\textbf{\cite{chen2020uniter}\lr{UNITER}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر & \lr{COCO + Visual Genome + Conceptual Captions + 
 			SBU Captions} & \lr{text-based MLM + visual-based MLM + Image-Text Matching + Word-Region Alignment}\\
 			\hline
-			\textbf{\cite{li2020oscar}\lr{OSCAR}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر  & \lr{Conceptual Captions} & \lr{text-based MLM + visual-based MLM + Image-Text Matching + Word-Region Alignment}\\
+			
+			\textbf{\cite{zhou2020unified}\lr{VLP}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر  & \lr{Conceptual Captions} & \lr{bidirectional + seq2seq}\\
 			\hline
-			\textbf{\cite{zhou2020unified}\lr{VLP}}& تک جریان & - & - & -\\
+			
+			\textbf{\cite{li2020oscar}\lr{OSCAR}}& تک جریان & کلمات جمله + \lr{ROI}های تصویر+ برچسب اشیا & \lr{COCO + Conceptual Captions + SBU captions + 
+			flicker30 + GQA} & \lr{Masked Token Loss + Contrastive Loss}\\
 			\hline \hline
-			\textbf{\cite{lu2019vilbert}\lr{ViL-BERT}}& دو جریان & - & - & -\\
+			
+			\textbf{\cite{lu2019vilbert}\lr{ViL-BERT}}& دو جریان & کلمات جمله + \lr{ROI}های تصویر & \lr{Conceptual Captions } & \lr{text-based MLM + visual-based MLM + Image-Text Matching}\\
 			\hline
-			\textbf{\cite{tan2019lxmert}\lr{LXMERT}}& دو جریان & - & - & -\\
+			
+			\textbf{\cite{tan2019lxmert}\lr{LXMERT}}& دو جریان & کلمات جمله + \lr{ROI}های تصویر & \lr{MS COCO + Visual Genome + VQA v2.0 + GQA balanced version + 
+			VG-QA} & \lr{text-based MLM + visual-based MLM + Image-Text Matching + 
+			Image Question Answering }\\
 			\hline		
 		\end{tabularx}
 	\end{table}
 
-
+	در جدول 
+	\ref{tabel:6}
+	مقایسه چند نمونه از مدل‌های از قبل آموزش‌دیده بر روی زبان طبیعی و تصویر که مسئله پرسش و پاسخ تصویری را پشتیبانی می‌کنند؛ آورده شده است. ورودی تمام این مدل‌ها،
+	کلمات جمله و
+	\lr{ROI}
+	های تصویر است به جز مدل 
+	\lr{OSCAR}
+	که علاوه بر این دو، برچسب اشیا را نیز به عنوان ورودی دریافت می‌کند. شباهت دیگر این مدل‌ها در استفاده از مجموعه‌داده 
+	\lr{Conceptual Captions}
+	برای آموزش است البته به جز مدل 
+	\lr{LXMERT}
+	که از این مجموعه‌داده استفاده نکرده است. نکته‌ی حائز اهمیت دیگر در این جدول استفاده تقریباً تمامی مدل‌ها از دو تابع هدف
+	\lr{text-based Masked Language Model}
+	و
+	\lr{visual-based Masked Language Model}
+	است.
+	
 	\begin{table}
 		\caption{دقت شبکه‌های از قبل آموزش‌دیده بر روی مجموعه‌داده 
 		\lr{VQA v2.0 (test-std)}}
-		\label{tabel:6}
+		\label{tabel:7}
 		\begin{center}
 			{\begin{tabular}{ |c|c|c|c|c| } 
 					\hline
@@ -1241,7 +1265,7 @@
 	\end{table}
 
 	در جدول 
-	\ref{tabel:6}
+	\ref{tabel:7}
 	نتایج مدل‌‌های 
 	\lr{VL-BERT}
 	،
