@@ -455,7 +455,7 @@ Advisors:
 \fi}
 
 \def\onvan{عنوان}
-\def\writtenfor{برای دریافت درجه }
+\def\writtenfor{ }
 \def\by{پژوهشگر}
 \def\latinby{By:}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
